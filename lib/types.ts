@@ -11,6 +11,7 @@ export interface INOTES{
 }
 
 export interface ICard {
+    id : string |number;
     title: string;
     content: string;
     createdAt: React.ReactNode;

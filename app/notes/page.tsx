@@ -25,7 +25,7 @@ export default async function Notes() {
 
     return (
         <div>
-            <NotesBody value={data} />
+            <NotesBody value={data.Notes} />
         </div>
     )
 }

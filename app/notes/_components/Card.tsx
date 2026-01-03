@@ -1,7 +1,9 @@
 import { ICard } from "@/lib/types"
 
 
-export default function Card({ note }: { note: ICard }) {
+export default function Card({ note, deleteBtn, deleteBtnId }: { note: ICard; deleteBtn: (id: string | number) => void; deleteBtnId: string | number | null; }) {
+
+
     return (
         <>
             <section>
@@ -16,7 +18,7 @@ export default function Card({ note }: { note: ICard }) {
                 <div className="flex gap-3">
                     <button className="border px-3 py-1 cursor-pointer hover:bg-green-400 rounded-md bg-green-300">Edit</button>
 
-                    <button className="border px-3 py-1 cursor-pointer hover:bg-red-600 bg-red-400 rounded-md">Delete</button>
+                    <button disabled={deleteBtnId === note.id ? true : false} onClick={() => deleteBtn(note.id)} className="border px-3 py-1 cursor-pointer hover:bg-red-600 bg-red-400 rounded-md disabled:opacity-50 disabled:cursor-not-allowed">{deleteBtnId === note.id ? "Deleting..." : "Delete"}</button>
 
                 </div>
             </section>

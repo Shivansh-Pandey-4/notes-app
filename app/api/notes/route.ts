@@ -49,11 +49,10 @@ export async function POST(req: NextRequest){
      }
 
      try {
-          const currentArray = await prisma.notes.findMany();
 
           const newNotes = await prisma.notes.create({
              data : {
-                 title, content, id: currentArray.length + 1
+                 title, content
              }
           })
 

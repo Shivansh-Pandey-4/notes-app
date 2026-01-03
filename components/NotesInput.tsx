@@ -36,7 +36,6 @@ export default function NotesInput() {
 
             setContent("");
             setTitle("");
-            setLoading(false);
 
             alert(data.msg || "data sent successfully");
             return;
@@ -44,6 +43,8 @@ export default function NotesInput() {
         } catch (error) {
             alert(error);
             return;
+        } finally {
+            setLoading(false);
         }
     }
 
