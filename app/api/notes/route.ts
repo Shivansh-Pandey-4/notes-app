@@ -9,7 +9,8 @@ export async function GET(){
               return NextResponse.json(
                  {
                     success : true,
-                     msg : "currently notes database is empty"
+                     msg : "currently notes database is empty",
+                     Notes : []
                  }, {status : 200}
               )
           }
