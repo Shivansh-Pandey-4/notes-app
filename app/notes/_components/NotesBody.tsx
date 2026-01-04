@@ -44,7 +44,12 @@ export default function NotesBody({ value }: { value: ICard[] }) {
 
     return (
         <div className="container mx-auto p-5">
-            <h1 className="text-2xl">Notes ({state.length})</h1>
+            <div className="flex justify-between">
+                <h1 className="text-2xl">Notes ({state.length})</h1>
+                {
+                    state.length !== 0 && <Link href={"/"}><h1 className="text-lg font-serif underline hover:text-green-700 cursor-pointer">Create New Notes</h1></Link>
+                }
+            </div>
             <div className="border border-gray-200  shadow-md p-5 mt-5 rounded-lg">
 
                 {
