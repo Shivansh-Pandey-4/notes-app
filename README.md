@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Notes Taking Application
 
-## Getting Started
+A full-stack Notes Taking App built with Next.js (App Router) that allows users to create, view, update, and delete notes.
+The project uses Next.js API routes as the backend and Prisma ORM for database operations.
 
-First, run the development server:
+## Features
+
+- Create new notes
+- View all notes
+- Edit existing notes
+- Delete notes
+- Loading & disabled states for better UX
+- Optimistic UI updates
+- Displays created and updated dates
+- Database persistence using Prisma
+
+## Tech Stack
+
+### Frontend
+Next.js 16 (App Router), React, TypeScript, Tailwind CSS.
+
+### Backend
+Next.js API Routes (/app/api), Prisma ORM, Database (PostgreSQL)
+
+## API Endpoints
+📌 Get all notes
+-  GET /api/notes
+
+➕ Create a note
+-  POST /api/notes
+-  Content-Type: application/json
+- Body -{
+         "title": "My Note",
+         "content": "This is my note"
+       }
+
+✏️ Update a note
+-  PATCH /api/notes/:id
+- Content-Type: application/json
+- Body -  {
+          "title": "Updated Title",
+          "content": "Updated Content"
+          }
+
+🗑️ Delete a note
+-  DELETE /api/notes/:id
+
+## Installation & Setup
+
+Follow the steps below to run the project locally.
+
+---
+
+### 1️⃣ Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Shivansh-Pandey-4/notes-app.git
+cd notes-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 2️⃣ Install Dependencies
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ ```bash
+ npm install
+ # or
+ yarn install
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📸 Screenshots
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🏠 Home Page – Create Note
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 📄 Notes Page – View All Notes
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### ✏️ Edit Note - Edit Any Note
