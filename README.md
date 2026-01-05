@@ -17,33 +17,40 @@ The project uses Next.js API routes as the backend and Prisma ORM for database o
 ## Tech Stack
 
 ### Frontend
+
 Next.js 16 (App Router), React, TypeScript, Tailwind CSS.
 
 ### Backend
+
 Next.js API Routes (/app/api), Prisma ORM, Database (PostgreSQL)
 
 ## API Endpoints
+
 📌 Get all notes
--  GET /api/notes
+
+- GET /api/notes
 
 ➕ Create a note
--  POST /api/notes
--  Content-Type: application/json
+
+- POST /api/notes
+- Content-Type: application/json
 - Body -{
-         "title": "My Note",
-         "content": "This is my note"
-       }
+  "title": "My Note",
+  "content": "This is my note"
+  }
 
 ✏️ Update a note
--  PATCH /api/notes/:id
+
+- PATCH /api/notes/:id
 - Content-Type: application/json
-- Body -  {
-          "title": "Updated Title",
-          "content": "Updated Content"
-          }
+- Body - {
+  "title": "Updated Title",
+  "content": "Updated Content"
+  }
 
 🗑️ Delete a note
--  DELETE /api/notes/:id
+
+- DELETE /api/notes/:id
 
 ## Installation & Setup
 
@@ -62,10 +69,10 @@ cd notes-app
 
 ### 2️⃣ Install Dependencies
 
- ```bash
- npm install
- # or
- yarn install
+```bash
+npm install
+# or
+yarn install
 ```
 
 ---
@@ -74,6 +81,12 @@ cd notes-app
 
 ### 🏠 Home Page – Create Note
 
+![Home Page](./screenshots/home.png)
+
 ### 📄 Notes Page – View All Notes
 
+![Notes Page](./screenshots/notes.png)
+
 ### ✏️ Edit Note - Edit Any Note
+
+![Edit Note](./screenshots/edit.png)
