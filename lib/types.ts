@@ -20,16 +20,22 @@ export interface ICard {
 
 
 export interface ICardProps {
-    note: ICard;
-    deleteBtn: (id: string | number) => void;
-    deleteBtnId: string | number | null;
-    startEdit: (note: ICard) => void;
-    editBtnId: string | number | null;
-    editTitle: string;
-    editContent: string;
-    setEditTitle: React.Dispatch<React.SetStateAction<string>>;
-    setEditContent: React.Dispatch<React.SetStateAction<string>>;
-    handleUpdate: (id: string | number) => void;
+  note: ICard;
+  deleteBtn: (id: string | number) => void;
+  deleteBtnId: string | number | null;
+  startEdit: (note: ICard) => void;
+  editState: {
+    id: string | number | null;
+    title: string;
+    content: string;
     updating: boolean;
-    cancelEdit: (note: ICard) => void;
+  };
+  setEditState: React.Dispatch<React.SetStateAction<{
+    id: string | number | null;
+    title: string;
+    content: string;
+    updating: boolean;
+  }>>;
+  handleUpdate: (id: string | number) => void;
+  cancelEdit: () => void;
 }
